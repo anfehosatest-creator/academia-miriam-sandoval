@@ -344,11 +344,17 @@ em.cursiva{font-style:italic;font-weight:400}
 .firma{font-family:var(--serif);font-style:italic;font-size:1.7rem;margin:30px 0 6px}
 
 /* ---------- Taller ---------- */
-.taller-visual{display:grid;grid-template-columns:1.6fr 1fr;gap:18px;margin-top:52px}
+.taller-visual{display:grid;grid-template-columns:1.75fr 1fr;gap:18px;margin-top:52px}
 @media(max-width:760px){.taller-visual{grid-template-columns:1fr}}
 /* Altura pareja en ambas fotos del taller: reparte el recorte y las alinea */
 .taller-visual .marco{height:clamp(260px,30vw,400px)}
-@media(max-width:760px){.taller-visual .marco{height:auto;aspect-ratio:16/9}}
+/* En celular cada foto usa su proporción real: la panorámica de la mesa y la
+   del grupo (casi cuadrada) no caben en un mismo marco sin mutilar una. */
+@media(max-width:760px){
+  .taller-visual .marco{height:auto}
+  .taller-visual .marco:first-child{aspect-ratio:2/1}
+  .taller-visual .marco:last-child{aspect-ratio:9/10}
+}
 .micro-beneficios{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
 @media(max-width:760px){.micro-beneficios{grid-template-columns:1fr}}
 .micro{display:flex;gap:14px;align-items:flex-start;font-size:.95rem}
