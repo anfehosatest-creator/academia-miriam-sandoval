@@ -35,8 +35,9 @@ chat se sabe desde qué sección escribió cada persona.
 
 ## Pendiente
 
-- [ ] Reemplazar las cifras de la franja negra (+20 años, 3 áreas, 100%, 6 alumnas)
-      por los datos reales de la academia
+- [x] Cifras de la franja negra confirmadas por Miriam: +30 años y 10 alumnas
+      máximo por grupo (2 de agosto de 2026)
+- [ ] Confirmar las dos cifras restantes: 3 áreas técnicas y 100% práctica
 - [ ] Agregar sección de testimonios de alumnas
 - [ ] Conectar Google Analytics o Meta Pixel (los botones ya están etiquetados
       con `data-cta` y el gancho está listo en el script)
