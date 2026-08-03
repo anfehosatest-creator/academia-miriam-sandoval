@@ -1,0 +1,11 @@
+# Fotos en resolución de cámara (~95 MB). Las versiones optimizadas
+# que usa la página están en img/ y esas sí se suben.
+fotos-originales/
+
+# Configuración local de herramientas
+.claude/
+
+# Basura del sistema
+Thumbs.db
+desktop.ini
+.DS_Store

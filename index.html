@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Curso de Alta Costura en Medellín — Aprende desde cero | Academia Miriam Sandoval</title>
+<meta name="description" content="Aprende a confeccionar tu propia ropa con técnica de alta costura. Sin experiencia previa. Grupos reducidos en Calasanz, Medellín. $150.000/mes. Agenda tu visita.">
+<meta property="og:title" content="Curso de Alta Costura en Medellín | Academia Miriam Sandoval">
+<meta property="og:description" content="Aprende a confeccionar tu propia ropa desde cero. Grupos reducidos en Calasanz, Medellín.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   ACADEMIA MIRIAM SANDOVAL — Landing Page
+   Paleta estricta blanco / negro. Acento dorado solo en micro-detalles.
+   ========================================================================== */
+
+:root{
+  --blanco:#FFFFFF;
+  --negro:#0A0A0A;
+  --negro-suave:#111111;
+  --gris:#6B6B6B;
+  --gris-claro:#E5E5E5;
+  --hueso:#FAF9F7;
+  --dorado:#B89B72;
+
+  /* Escala de grises ampliada: da profundidad sin salirse del blanco y negro */
+  --carbon:#1C1C1C;       /* negro levantado, para degradados */
+  --grafito:#2E2E2E;      /* bordes y separadores sobre oscuro */
+  --plomo:#4A4A4A;
+  --peltre:#8A8A8A;       /* texto secundario sobre oscuro */
+  --perla:#D8D5D1;        /* gris cálido medio */
+  --humo:#F1EFEC;         /* fondo alterno más marcado que el hueso */
+  --niebla:#E9E6E2;
+
+  /* Degradados reutilizables */
+  --deg-claro:linear-gradient(170deg,#FFFFFF 0%,var(--hueso) 45%,var(--humo) 100%);
+  --deg-oscuro:linear-gradient(165deg,var(--carbon) 0%,var(--negro) 55%,#050505 100%);
+  --deg-tarjeta:linear-gradient(160deg,#FFFFFF 0%,#FBFAF9 100%);
+  --deg-texto:linear-gradient(180deg,#FFFFFF 0%,#C9C6C2 100%);
+
+  --serif:'Playfair Display', Georgia, 'Times New Roman', serif;
+  --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --max:1180px;
+  --pad-seccion:clamp(64px, 9vw, 120px);
+  --radio:16px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.7;
+  color:var(--negro-suave);
+  background:var(--blanco);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+
+/* ---------- Estructura ---------- */
+.contenedor{max-width:var(--max);margin:0 auto;padding:0 24px}
+section{padding:var(--pad-seccion) 0;background:linear-gradient(180deg,#FFFFFF 0%,#FCFBFA 60%,#F8F6F4 100%)}
+.fondo-negro{background:var(--deg-oscuro);color:var(--blanco);position:relative}
+/* filete degradado que separa las secciones oscuras */
+.fondo-negro::before,.fondo-negro::after{
+  content:'';position:absolute;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--grafito) 22%,var(--plomo) 50%,var(--grafito) 78%,transparent);
+}
+.fondo-negro::before{top:0}
+.fondo-negro::after{bottom:0}
+.fondo-hueso{background:var(--deg-claro)}
+
+/* ---------- Tipografía ---------- */
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.15;letter-spacing:-.01em;text-wrap:balance}
+h1{font-size:clamp(2.4rem,5.6vw,4.3rem)}
+h2{font-size:clamp(1.9rem,4vw,3.1rem)}
+h3{font-size:clamp(1.15rem,2vw,1.4rem)}
+em.cursiva{font-style:italic;font-weight:400}
+.etiqueta{
+  display:inline-block;font-family:var(--sans);font-size:.72rem;font-weight:500;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--gris);
+  background:linear-gradient(160deg,var(--blanco),var(--humo));
+  border:1px solid var(--niebla);border-radius:999px;padding:7px 18px;margin-bottom:26px;
+  box-shadow:0 2px 8px rgba(0,0,0,.03);
+}
+.fondo-negro .etiqueta{
+  color:var(--peltre);border-color:var(--grafito);
+  background:linear-gradient(160deg,var(--carbon),#141414);box-shadow:none;
+}
+.subtitulo{font-size:1.06rem;color:var(--gris);max-width:640px;margin-top:20px}
+.fondo-negro .subtitulo{color:var(--peltre)}
+.centrado{text-align:center}
+.centrado .subtitulo{margin-left:auto;margin-right:auto}
+
+/* ---------- Botones ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:var(--sans);font-size:.98rem;font-weight:500;letter-spacing:.01em;
+  padding:17px 34px;border-radius:999px;border:1px solid transparent;
+  cursor:pointer;transition:transform .22s ease, background .22s ease, box-shadow .22s ease;
+  white-space:nowrap;
+}
+.btn-primario{background:var(--negro);color:var(--blanco);box-shadow:0 8px 24px rgba(0,0,0,.16)}
+.btn-primario:hover{background:#2B2B2B;transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.22)}
+.btn-secundario{background:transparent;color:var(--negro-suave);border-color:var(--negro-suave)}
+.btn-secundario:hover{background:var(--negro);color:var(--blanco);transform:translateY(-2px)}
+.fondo-negro .btn-primario{background:var(--blanco);color:var(--negro)}
+.fondo-negro .btn-primario:hover{background:#e9e9e9}
+.btn-ancho{width:100%;white-space:normal;text-align:center}
+.btn-grande{padding:21px 46px;font-size:1.06rem}
+.grupo-btn{display:flex;gap:14px;flex-wrap:wrap;margin-top:38px}
+.centrado .grupo-btn{justify-content:center}
+
+/* ---------- Marcos de imagen con placeholder ---------- */
+.marco{
+  position:relative;overflow:hidden;border-radius:var(--radio);
+  background:
+    repeating-linear-gradient(45deg,#f2f0ed 0 12px,#eae7e2 12px 24px);
+  box-shadow:0 18px 50px rgba(0,0,0,.10);
+}
+.marco::after{
+  content:attr(data-placeholder);
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:#a9a29a;
+  text-align:center;padding:20px;pointer-events:none;
+}
+.marco img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover}
+
+/* Telón: la foto se destapa de abajo hacia arriba al entrar en pantalla.
+   Sin 'con-animacion' la foto se ve entera desde el principio. */
+.con-animacion .marco.entrada{
+  clip-path:inset(0 0 100% 0 round var(--radio));
+  transition:clip-path 1.05s cubic-bezier(.19,1,.22,1);
+}
+.marco.entrada.dentro{clip-path:inset(0 0 0 0 round var(--radio))}
+
+/* Dos capas separadas para que no compitan por el mismo transform:
+   .lente lo mueve el scroll (sin transición, para que siga al dedo)
+   la <img> hace el acercamiento de entrada (con transición) */
+.lente{
+  position:absolute;left:0;right:0;top:-6%;height:112%;z-index:1;
+  will-change:transform;
+}
+.con-animacion .marco.entrada img{transform:scale(1.12);transition:transform 1.5s cubic-bezier(.19,1,.22,1)}
+.marco.entrada.dentro img{transform:scale(1)}
+.marco img[src=""],.marco img:not([src]){display:none}
+
+/* ---------- Nav ---------- */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:900;
+  background:rgba(255,255,255,.88);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--gris-claro);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;height:96px;transition:height .3s ease}
+.nav.compacto .nav-inner{height:72px}
+
+/* ---- Logotipo: emblema MS + nombre ---- */
+.logo{display:flex;align-items:center;gap:15px}
+.emblema{
+  --fondo:var(--negro); --letra:var(--blanco);
+  width:64px;height:64px;flex-shrink:0;overflow:visible;
+  transition:width .3s ease,height .3s ease,transform .5s ease;
+}
+.nav.compacto .emblema{width:50px;height:50px}
+.emblema .disco{fill:var(--fondo)}
+.emblema .puntada{
+  fill:none;stroke:var(--fondo);stroke-width:1.4;opacity:.6;
+  stroke-dasharray:4.5 5;stroke-linecap:round;
+  transform-origin:50% 50%;transition:transform 1s cubic-bezier(.22,.9,.28,1);
+}
+.emblema .iniciales{
+  font-family:var(--serif);font-size:38px;font-weight:500;letter-spacing:-1px;
+  fill:var(--letra);text-anchor:middle;
+}
+.emblema .hilo{stroke:var(--letra);stroke-width:1.4;stroke-linecap:round;opacity:.65}
+.logo:hover .puntada{transform:rotate(150deg)}
+.logo:hover .emblema{transform:scale(1.05) rotate(-3deg)}
+
+.logo-texto{display:flex;flex-direction:column;line-height:1}
+.logo-texto b{
+  font-family:var(--serif);font-weight:500;
+  font-size:1.42rem;letter-spacing:.14em;text-transform:uppercase;
+  transition:font-size .3s ease;
+}
+.nav.compacto .logo-texto b{font-size:1.18rem}
+.logo-texto i{
+  display:flex;align-items:center;gap:8px;margin-top:7px;
+  font-style:normal;font-size:.58rem;letter-spacing:.34em;
+  text-transform:uppercase;color:var(--gris);white-space:nowrap;
+}
+.logo-texto i::before,.logo-texto i::after{
+  content:'';height:1px;flex:1;min-width:14px;background:var(--gris-claro);
+}
+@media(max-width:720px){
+  .nav-inner{height:70px;gap:10px}
+  .logo{gap:10px}
+  .emblema,.nav.compacto .emblema{width:42px;height:42px}
+  .logo-texto b,.nav.compacto .logo-texto b{font-size:.82rem;letter-spacing:.09em;white-space:nowrap}
+  .logo-texto i{display:none}
+  .nav .btn{padding:11px 18px;font-size:.8rem}
+  .hero{padding-top:calc(70px + clamp(40px,7vw,92px))}
+}
+.nav-links{display:flex;gap:30px;font-size:.9rem;color:var(--gris)}
+.nav-links a{transition:color .2s}
+.nav-links a:hover{color:var(--negro)}
+.nav .btn{padding:12px 24px;font-size:.88rem}
+@media(max-width:980px){.nav-links{display:none}}
+
+/* ---------- Hero ---------- */
+.hero{padding-top:calc(96px + clamp(48px,7vw,92px));position:relative;overflow:hidden}
+.hero::before{
+  content:'';position:absolute;inset:0;z-index:-1;
+  background-image:linear-gradient(var(--gris-claro) 1px,transparent 1px),
+                   linear-gradient(90deg,var(--gris-claro) 1px,transparent 1px);
+  background-size:64px 64px;
+  -webkit-mask-image:radial-gradient(ellipse 70% 55% at 50% 25%,#000 20%,transparent 75%);
+          mask-image:radial-gradient(ellipse 70% 55% at 50% 25%,#000 20%,transparent 75%);
+  opacity:.6;
+}
+.badge{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--hueso);border:1px solid var(--gris-claro);border-radius:999px;
+  padding:9px 20px;font-size:.83rem;color:var(--gris);margin-bottom:30px;
+}
+.badge b{color:var(--negro-suave);font-weight:600}
+/* solo el salto de línea del titular, nunca los <span> de las palabras animadas */
+.hero h1 .linea{display:block}
+.hero-bullets{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:10px 26px;
+  margin-top:30px;font-size:.92rem;color:var(--gris);
+}
+.hero-bullets li{list-style:none}
+.hero-bullets li::before{content:'✓';color:var(--dorado);margin-right:8px;font-weight:600}
+/* Tríptico del hero: respeta el formato vertical de las fotos */
+.hero-visual{
+  margin-top:62px;display:grid;grid-template-columns:1fr 1.22fr 1fr;
+  gap:18px;align-items:center;
+}
+.hero-visual .marco{aspect-ratio:3/4}
+.hero-visual .marco.central{aspect-ratio:2/3;box-shadow:0 26px 60px rgba(0,0,0,.16)}
+.hero-visual .marco:not(.central){opacity:.94}
+.hero-visual .marco:not(.central) img{object-position:center 22%}
+@media(max-width:820px){
+  .hero-visual{grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto}
+  .hero-visual .marco:not(.central){display:none}
+}
+
+/* ---------- Cifras ---------- */
+.cifras{display:grid;grid-template-columns:repeat(4,1fr);margin-top:52px}
+.cifra{
+  text-align:center;padding:14px 18px;
+  border-left:1px solid;
+  border-image:linear-gradient(transparent,var(--grafito) 25%,var(--plomo) 50%,var(--grafito) 75%,transparent) 1;
+}
+.cifra:first-child{border-left:none}
+.cifra b{
+  display:block;font-family:var(--serif);font-size:clamp(2.2rem,5vw,3.4rem);font-weight:500;line-height:1;
+  color:var(--blanco);   /* color base: si el degradado no se soporta, el número igual se ve */
+}
+@supports (background-clip:text) or (-webkit-background-clip:text){
+  .cifra b{background:var(--deg-texto);-webkit-background-clip:text;background-clip:text;color:transparent}
+}
+.cifra small{display:block;margin-top:12px;font-size:.83rem;color:var(--peltre);line-height:1.5}
+@media(max-width:720px){
+  .cifras{grid-template-columns:repeat(2,1fr);gap:34px 0}
+  .cifra:nth-child(odd){border-left:none}
+}
+
+/* ---------- Grillas de tarjetas ---------- */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:52px}
+@media(max-width:940px){.grid-3,.grid-4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid-3,.grid-4{grid-template-columns:1fr}}
+
+.tarjeta{
+  background:var(--deg-tarjeta);border:1px solid var(--niebla);border-radius:var(--radio);
+  padding:34px 30px;position:relative;overflow:hidden;
+  transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+/* brillo diagonal que aparece al pasar el cursor */
+.tarjeta::after{
+  content:'';position:absolute;inset:0;pointer-events:none;opacity:0;
+  background:linear-gradient(135deg,rgba(0,0,0,.045) 0%,transparent 42%,transparent 100%);
+  transition:opacity .35s ease;
+}
+.tarjeta:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(0,0,0,.10);border-color:var(--perla)}
+.tarjeta:hover::after{opacity:1}
+.tarjeta .ico{
+  width:44px;height:44px;border:1px solid var(--niebla);border-radius:12px;
+  background:linear-gradient(160deg,var(--blanco),var(--humo));
+  display:flex;align-items:center;justify-content:center;font-size:1.15rem;margin-bottom:22px;
+  transition:border-color .3s ease,transform .3s ease;
+}
+.tarjeta:hover .ico{border-color:var(--perla);transform:scale(1.06) rotate(-3deg)}
+.tarjeta .num{
+  font-family:var(--serif);font-size:.95rem;color:var(--dorado);
+  letter-spacing:.1em;margin-bottom:12px;display:block;
+}
+.tarjeta h3{margin-bottom:12px}
+.tarjeta p{font-size:.95rem;color:var(--gris)}
+
+.nota-ancha{
+  margin-top:22px;background:var(--deg-tarjeta);border:1px solid var(--niebla);
+  border-radius:var(--radio);padding:28px 32px;font-size:.96rem;color:var(--gris);
+  box-shadow:0 2px 10px rgba(0,0,0,.03);
+}
+.nota-ancha b{color:var(--negro-suave)}
+
+/* ---------- Galería ---------- */
+.galeria{columns:3;column-gap:18px;margin-top:52px}
+@media(max-width:900px){.galeria{columns:2}}
+@media(max-width:560px){.galeria{columns:1}}
+.pieza{break-inside:avoid;margin-bottom:18px;position:relative;border-radius:var(--radio);overflow:hidden}
+.pieza .marco{box-shadow:0 10px 30px rgba(0,0,0,.09)}
+.pieza .rotulo{
+  position:absolute;inset:auto 0 0 0;z-index:2;
+  background:linear-gradient(transparent,rgba(20,20,20,.55) 45%,rgba(5,5,5,.92));
+  color:#fff;font-size:.85rem;padding:56px 20px 18px;letter-spacing:.01em;
+  opacity:0;transform:translateY(10px);transition:.32s ease;
+}
+.pieza .marco{transition:box-shadow .35s ease,transform .35s ease}
+.pieza:hover .marco{box-shadow:0 20px 44px rgba(0,0,0,.16)}
+.pieza:hover .rotulo{opacity:1;transform:translateY(0)}
+@media(hover:none){.pieza .rotulo{opacity:1;transform:none}}
+.pie-galeria{margin-top:26px;font-size:.85rem;color:var(--gris);text-align:center;font-style:italic}
+
+/* ---------- Profesora ---------- */
+.profesora{display:grid;grid-template-columns:.85fr 1fr;gap:60px;align-items:center}
+@media(max-width:900px){.profesora{grid-template-columns:1fr;gap:40px}}
+.retrato-principal{aspect-ratio:3/4}
+.retratos-mini{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.retratos-mini .marco{aspect-ratio:1}
+/* la foto de la máquina de coser es horizontal: se encuadra hacia la izquierda
+   para que la Singer siga visible dentro del recorte cuadrado */
+.retratos-mini .marco:first-child img{object-position:38% center}
+.profesora p{color:#B0ADA9;margin-bottom:18px;font-size:1.02rem}
+.cargo{font-style:italic;color:var(--dorado);margin:10px 0 26px;font-size:1rem}
+.firma{font-family:var(--serif);font-style:italic;font-size:1.7rem;margin:30px 0 6px}
+
+/* ---------- Taller ---------- */
+.taller-visual{display:grid;grid-template-columns:1.6fr 1fr;gap:18px;margin-top:52px}
+@media(max-width:760px){.taller-visual{grid-template-columns:1fr}}
+/* Altura pareja en ambas fotos del taller: reparte el recorte y las alinea */
+.taller-visual .marco{height:clamp(260px,30vw,400px)}
+@media(max-width:760px){.taller-visual .marco{height:auto;aspect-ratio:16/9}}
+.micro-beneficios{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+@media(max-width:760px){.micro-beneficios{grid-template-columns:1fr}}
+.micro{display:flex;gap:14px;align-items:flex-start;font-size:.95rem}
+.micro span{font-size:1.3rem;line-height:1}
+.micro b{display:block;margin-bottom:3px}
+.micro small{color:var(--gris);font-size:.9rem}
+
+/* ---------- Pasos ---------- */
+.pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;margin-top:56px;position:relative}
+@media(max-width:800px){.pasos{grid-template-columns:1fr;gap:30px}}
+.paso{position:relative;padding-top:14px}
+.paso b.n{
+  font-family:var(--serif);font-size:2.9rem;font-weight:500;
+  color:var(--perla);
+  display:block;line-height:1;margin-bottom:14px;
+  transition:color .4s ease;
+}
+.paso:hover b.n{color:var(--plomo)}
+@supports (background-clip:text) or (-webkit-background-clip:text){
+  .paso b.n{
+    background:linear-gradient(180deg,var(--perla) 0%,var(--niebla) 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .paso:hover b.n{background:linear-gradient(180deg,var(--plomo),var(--perla));-webkit-background-clip:text;background-clip:text;color:transparent}
+}
+.paso h3{margin-bottom:10px}
+.paso p{font-size:.95rem;color:var(--gris)}
+
+/* ---------- Precio ---------- */
+.bloque-precio{display:grid;grid-template-columns:1.15fr .85fr;gap:26px;margin-top:52px;align-items:start}
+.bloque-precio > *{min-width:0}
+@media(max-width:880px){.bloque-precio{grid-template-columns:1fr}}
+.card-precio{
+  background:linear-gradient(165deg,#FFFFFF 0%,#FBFAF8 55%,var(--humo) 100%);
+  color:var(--negro-suave);
+  border-radius:22px;padding:44px 40px;box-shadow:0 30px 80px rgba(0,0,0,.45);
+}
+.card-precio h3{font-size:1.35rem}
+.precio{font-family:var(--serif);font-size:clamp(2.8rem,6vw,3.9rem);font-weight:500;line-height:1;margin:14px 0 6px}
+.precio small{font-family:var(--sans);font-size:1rem;color:var(--gris);font-weight:400}
+.precio-nota{font-size:.88rem;color:var(--gris);font-style:italic;margin-bottom:28px}
+.lista-check{list-style:none;margin:26px 0 32px;display:grid;gap:13px}
+.lista-check li{display:flex;gap:12px;font-size:.96rem;align-items:flex-start}
+.lista-check li::before{content:'✓';color:var(--dorado);font-weight:700;flex-shrink:0}
+.letra-chica{font-size:.85rem;color:var(--gris);margin-top:20px;line-height:1.6;font-style:italic}
+.card-requisitos{
+  border:1px solid var(--grafito);border-radius:22px;padding:40px 34px;
+  background:linear-gradient(160deg,rgba(255,255,255,.045),rgba(255,255,255,0) 70%);
+}
+.card-requisitos h3{color:var(--blanco);margin-bottom:24px;font-size:1.25rem}
+.card-requisitos ul{list-style:none;display:grid;gap:22px}
+.card-requisitos li{display:flex;gap:14px;align-items:flex-start}
+.card-requisitos li span{font-size:1.25rem;line-height:1.2}
+.card-requisitos b{display:block;color:var(--blanco);margin-bottom:4px;font-size:.98rem}
+.card-requisitos small{color:var(--peltre);font-size:.92rem;line-height:1.6}
+
+/* ---------- FAQ ---------- */
+.faq{margin-top:52px;max-width:840px;margin-left:auto;margin-right:auto}
+.faq details{
+  border-bottom:1px solid var(--gris-claro);
+  transition:background .3s ease;padding:0 16px;margin:0 -16px;border-radius:10px;
+}
+.faq details[open]{background:linear-gradient(180deg,rgba(0,0,0,.022),transparent)}
+.faq details:hover{background:rgba(0,0,0,.016)}
+.faq summary{
+  list-style:none;cursor:pointer;padding:26px 44px 26px 0;position:relative;
+  font-family:var(--serif);font-size:1.15rem;line-height:1.4;
+  transition:color .25s ease;
+}
+.faq summary:hover{color:var(--plomo)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:'+';position:absolute;right:6px;top:50%;transform:translateY(-50%);
+  font-size:1.5rem;color:var(--gris);transition:transform .25s ease;font-family:var(--sans);
+}
+.faq details[open] summary::after{content:'×';transform:translateY(-50%) rotate(180deg)}
+.faq p{padding:0 44px 28px 0;color:var(--gris);font-size:.98rem}
+
+/* ---------- Cierre ---------- */
+.cierre{position:relative;overflow:hidden;text-align:center}
+.cierre .contenedor{position:relative;z-index:2}
+.cierre h2{max-width:14ch;margin:0 auto}
+.datos-cierre{margin-top:26px;font-size:.9rem;color:#8f8f8f}
+
+/* ---------- Mapa + Footer ---------- */
+.mapa{width:100%;height:320px;border:0;filter:grayscale(1) contrast(1.08);display:block}
+footer{background:linear-gradient(180deg,var(--carbon) 0%,#080808 45%,#030303 100%);color:var(--peltre);padding:64px 0 0}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}
+@media(max-width:760px){.footer-grid{grid-template-columns:1fr;gap:34px}}
+footer h4{font-family:var(--serif);color:var(--blanco);font-size:1rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px;font-weight:500}
+.emblema-footer{width:86px;height:86px;margin-bottom:24px;overflow:visible}
+.emblema-footer .disco{fill:var(--blanco)}
+.emblema-footer .puntada{fill:none;stroke:var(--blanco);stroke-width:1.3;opacity:.4;stroke-dasharray:4.5 5;stroke-linecap:round}
+.emblema-footer .iniciales{font-family:var(--serif);font-size:38px;font-weight:500;letter-spacing:-1px;fill:#050505;text-anchor:middle}
+.emblema-footer .hilo{stroke:#050505;stroke-width:1.4;stroke-linecap:round;opacity:.55}
+footer p,footer li{font-size:.92rem;line-height:1.9;list-style:none}
+footer a:hover{color:var(--blanco)}
+.copy{margin-top:52px;border-top:1px solid #1a1a1a;padding:24px 0;font-size:.8rem;text-align:center;color:#5e5e5e}
+
+/* ---------- Flotantes ---------- */
+.wa-flotante{
+  position:fixed;right:22px;bottom:22px;z-index:950;
+  width:58px;height:58px;border-radius:50%;background:var(--negro);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 10px 30px rgba(0,0,0,.32);
+  opacity:0;visibility:hidden;transform:scale(.8);transition:.3s ease;
+}
+.wa-flotante.visible{opacity:1;visibility:visible;transform:scale(1);animation:pulso 8s infinite}
+.wa-flotante svg{width:29px;height:29px;fill:#fff}
+@keyframes pulso{0%,88%,100%{box-shadow:0 10px 30px rgba(0,0,0,.32)}94%{box-shadow:0 10px 30px rgba(0,0,0,.32),0 0 0 14px rgba(10,10,10,0)}91%{box-shadow:0 10px 30px rgba(0,0,0,.32),0 0 0 0 rgba(10,10,10,.28)}}
+
+.barra-movil{
+  position:fixed;left:0;right:0;bottom:0;z-index:940;display:none;
+  background:var(--negro);color:#fff;padding:12px 16px;
+  align-items:center;justify-content:space-between;gap:12px;
+  box-shadow:0 -6px 24px rgba(0,0,0,.2);
+}
+.barra-movil small{color:#9a9a9a;font-size:.76rem;display:block}
+.barra-movil b{font-size:.95rem}
+.barra-movil .btn{background:#fff;color:var(--negro);padding:13px 22px;font-size:.9rem;box-shadow:none}
+@media(max-width:767px){
+  .barra-movil{display:flex}
+  .wa-flotante{bottom:88px}
+  body{padding-bottom:74px}
+}
+
+/* ---------- Ajustes finos de móvil ---------- */
+@media(max-width:520px){
+  .card-precio{padding:34px 24px}
+  .card-requisitos{padding:32px 24px}
+  .tarjeta{padding:30px 24px}
+  .btn{padding:16px 26px;font-size:.94rem;white-space:normal;text-align:center}
+  .btn-grande{padding:18px 30px;font-size:1rem}
+  .grupo-btn .btn{width:100%}
+}
+
+/* ---------- Animación de entrada ---------- */
+/* Nada se oculta salvo que el script haya arrancado y puesto
+   'con-animacion' en <html>. Si el JS falla, la página se ve completa. */
+.con-animacion .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.dentro{opacity:1;transform:none}
+
+/* Títulos: cada palabra sube desde debajo de una línea invisible */
+.pal{
+  display:inline-block;overflow:hidden;vertical-align:bottom;
+  padding-bottom:.16em;margin-bottom:-.16em;   /* deja respirar las colas de g, y, p */
+}
+.con-animacion .pal > span{
+  display:inline-block;transform:translateY(115%);opacity:0;
+  transition:transform .85s cubic-bezier(.19,1,.22,1), opacity .6s ease;
+}
+.animado.dentro .pal > span{transform:translateY(0);opacity:1}
+
+/* Filete que se dibuja solo bajo los títulos de sección */
+.filete{
+  display:block;height:1px;width:min(260px,60%);margin:26px auto 0;
+  background:linear-gradient(90deg,transparent,var(--perla) 30%,var(--plomo) 50%,var(--perla) 70%,transparent);
+  transition:width 1.1s cubic-bezier(.19,1,.22,1) .35s;
+}
+.con-animacion .filete{width:0}
+.fondo-negro .filete{background:linear-gradient(90deg,transparent,var(--grafito) 30%,var(--peltre) 50%,var(--grafito) 70%,transparent)}
+.animado.dentro .filete{width:min(260px,60%)}
+/* en las secciones alineadas a la izquierda, el filete arranca desde el borde */
+.profesora .filete{margin-left:0}
+
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .pal > span{transform:none;opacity:1;transition:none}
+  .filete{width:min(260px,60%);transition:none}
+  .tarjeta:hover,.tarjeta:hover .ico{transform:none}
+  .marco.entrada{clip-path:none;transition:none}
+  .marco.entrada img,.marco.entrada.dentro img{transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- ====================== 1. NAVEGACIÓN ====================== -->
+<nav class="nav">
+  <div class="contenedor nav-inner">
+    <a href="#" class="logo" aria-label="Academia Miriam Sandoval — inicio">
+      <svg class="emblema" viewBox="0 0 100 100" aria-hidden="true">
+        <circle class="puntada" cx="50" cy="50" r="48"/>
+        <circle class="disco" cx="50" cy="50" r="41"/>
+        <text class="iniciales" x="50" y="59">MS</text>
+        <line class="hilo" x1="36" y1="70" x2="64" y2="70"/>
+      </svg>
+      <span class="logo-texto">
+        <b>Miriam Sandoval</b>
+        <i>Alta Costura</i>
+      </span>
+    </a>
+    <div class="nav-links">
+      <a href="#programa">El Curso</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#profesora">La Profesora</a>
+      <a href="#inversion">Inversión</a>
+      <a href="#preguntas">Preguntas</a>
+    </div>
+    <a class="btn btn-primario" data-cta="nav"
+       href="https://wa.me/573132575989?text=Hola%20Miriam%2C%20vi%20la%20p%C3%A1gina%20y%20quiero%20informaci%C3%B3n%20del%20curso%20de%20alta%20costura"
+       target="_blank" rel="noopener">Escríbenos</a>
+  </div>
+</nav>
+
+<!-- ====================== 2. HERO ====================== -->
+<header class="hero">
+  <div class="contenedor centrado">
+    <span class="badge">✂ <b>Cupos limitados</b> · Grupos reducidos · Medellín, Calasanz</span>
+    <h1>
+      Cose tu propia ropa
+      <span class="linea"><em class="cursiva">desde cero, con técnica de alta costura</em></span>
+    </h1>
+    <p class="subtitulo">
+      No necesitas experiencia previa. En pocos meses estarás cortando, ensamblando y
+      terminando prendas que la gente jurará que compraste en una boutique.
+    </p>
+    <ul class="hero-bullets">
+      <li>Sin experiencia previa</li>
+      <li>Grupos pequeños</li>
+      <li>Mañana o tarde</li>
+      <li>$150.000 al mes</li>
+    </ul>
+    <div class="grupo-btn">
+      <a class="btn btn-primario btn-grande" data-cta="hero"
+         href="https://wa.me/573132575989?text=Hola%20Miriam%2C%20quiero%20agendar%20una%20visita%20al%20taller%20para%20conocer%20el%20curso"
+         target="_blank" rel="noopener">Agenda tu visita al taller</a>
+      <a class="btn btn-secundario btn-grande" href="#proyectos">▷ Ver los trabajos de las alumnas</a>
+    </div>
+  </div>
+  <div class="contenedor">
+    <div class="hero-visual reveal">
+      <div class="marco" data-placeholder="img/prenda-02.jpg">
+        <img src="img/prenda-02.jpg" alt="Conjunto camisero y pantalón en verde oliva confeccionado en el taller">
+      </div>
+      <div class="marco central" data-placeholder="img/hero.jpg">
+        <img src="img/hero.jpg" alt="Dos alumnas de la academia luciendo prendas confeccionadas en el taller">
+      </div>
+      <div class="marco" data-placeholder="img/prenda-07.jpg">
+        <img src="img/prenda-07.jpg" alt="Pantalón palazzo verde con estampado floral confeccionado en el taller">
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ====================== 3. CIFRAS ====================== -->
+<section class="fondo-negro">
+  <div class="contenedor centrado">
+    <p class="subtitulo" style="font-style:italic;margin-top:0">
+      Un taller con más de 20 años formando costureras, emprendedoras y diseñadoras
+    </p>
+    <div class="cifras reveal">
+      <div class="cifra"><b>+20</b><small>Años de experiencia enseñando</small></div>
+      <div class="cifra"><b>3</b><small>Áreas técnicas completas</small></div>
+      <div class="cifra"><b>100%</b><small>Práctica desde la primera clase</small></div>
+      <div class="cifra"><b>6</b><small>Alumnas máximo por grupo</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 4. ¿ESTO ES PARA MÍ? ====================== -->
+<section id="para-quien">
+  <div class="contenedor centrado">
+    <span class="etiqueta">Para quién es</span>
+    <h2>Para quien siempre quiso aprender<br><em class="cursiva">y nunca supo por dónde empezar</em></h2>
+    <p class="subtitulo">Da igual si nunca has enhebrado una aguja. Aquí empezamos por el principio.</p>
+    <div class="grid-4">
+      <article class="tarjeta reveal" style="text-align:left">
+        <div class="ico">💼</div>
+        <h3>Quieres un ingreso propio</h3>
+        <p>Aprende un oficio que se paga en efectivo, desde tu casa y con tus horarios. Muchas alumnas cosen para su barrio antes de terminar el curso.</p>
+      </article>
+      <article class="tarjeta reveal" style="text-align:left">
+        <div class="ico">📐</div>
+        <h3>Quieres vestirte a tu medida</h3>
+        <p>Deja de conformarte con tallas que no te quedan. Diseña y cose exactamente lo que quieres, con la tela que quieres.</p>
+      </article>
+      <article class="tarjeta reveal" style="text-align:left">
+        <div class="ico">🧵</div>
+        <h3>Buscas un espacio para ti</h3>
+        <p>Tres horas a la semana lejos del ruido, creando algo con tus manos. Muchas llegan por hobby y terminan vendiendo.</p>
+      </article>
+      <article class="tarjeta reveal" style="text-align:left">
+        <div class="ico">✂️</div>
+        <h3>Ya coses, pero quieres técnica</h3>
+        <p>Si aprendiste “a ojo”, aquí entenderás patronaje, moldería y acabados profesionales. La diferencia entre modistería y alta costura.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 5. PROGRAMA ====================== -->
+<section id="programa" class="fondo-hueso">
+  <div class="contenedor centrado">
+    <span class="etiqueta">El programa</span>
+    <h2>Todo lo que necesitas para <em class="cursiva">coser cualquier prenda</em></h2>
+    <p class="subtitulo">Tres áreas técnicas. Cada una desbloquea un tipo de prenda distinto.</p>
+    <div class="grid-3">
+      <article class="tarjeta reveal" style="text-align:left">
+        <span class="num">01</span>
+        <h3>Tela elástica</h3>
+        <p>Camisetas, bodies, leggins y vestidos ajustados. Aprende a domar las telas que se estiran: puntadas correctas, márgenes, cuellos y acabados que no se deforman con el uso.</p>
+      </article>
+      <article class="tarjeta reveal" style="text-align:left">
+        <span class="num">02</span>
+        <h3>Tejido plano</h3>
+        <p>Blusas, pantalones, faldas y camisas. El corazón de la alta costura: patronaje a la medida, pinzas, cuellos, mangas, cremalleras y forros bien montados.</p>
+      </article>
+      <article class="tarjeta reveal" style="text-align:left">
+        <span class="num">03</span>
+        <h3>Ropa interior</h3>
+        <p>Brasieres, panties y piezas de lencería. La técnica más fina y detallada, y una de las más rentables si piensas vender.</p>
+      </article>
+    </div>
+    <div class="nota-ancha reveal" style="text-align:left">
+      <b>Y en todas las clases:</b> toma de medidas · trazo y molde · corte · manejo de máquina ·
+      terminaciones profesionales · lectura de tu propio cuerpo.
+    </div>
+    <div class="grupo-btn">
+      <a class="btn btn-secundario" data-cta="programa"
+         href="https://wa.me/573132575989?text=Hola%20Miriam%2C%20quiero%20que%20me%20expliques%20el%20programa%20del%20curso"
+         target="_blank" rel="noopener">Ven al taller y te explico el programa</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 6. GALERÍA DE PROYECTOS ====================== -->
+<section id="proyectos">
+  <div class="contenedor centrado">
+    <span class="etiqueta">Trabajos de las alumnas</span>
+    <h2>Esto <b style="font-weight:600">no</b> se compró en una tienda.<br><em class="cursiva">Se cosió aquí.</em></h2>
+    <p class="subtitulo">Cada prenda que ves fue confeccionada por una alumna del taller, muchas empezando desde cero.</p>
+
+    <div class="galeria">
+      <figure class="pieza reveal">
+        <div class="marco" style="aspect-ratio:2/3" data-placeholder="img/prenda-01.jpg — Imagen 4">
+          <img src="img/prenda-01.jpg" alt="Falda en denim y camisa en satín confeccionadas por alumnas">
+        </div>
+        <figcaption class="rotulo">Falda en denim y camisa en satín — tejido plano</figcaption>
+      </figure>
+      <figure class="pieza reveal">
+        <div class="marco" style="aspect-ratio:2/3" data-placeholder="img/prenda-02.jpg — Imagen 5">
+          <img src="img/prenda-02.jpg" alt="Conjunto camisero y pantalón ancho en verde oliva">
+        </div>
+        <figcaption class="rotulo">Conjunto camisero y pantalón ancho</figcaption>
+      </figure>
+      <figure class="pieza reveal">
+        <div class="marco" style="aspect-ratio:2/3" data-placeholder="img/prenda-03.jpg — Imagen 6">
+          <img src="img/prenda-03.jpg" alt="Falda cruzada con vuelo asimétrico y estampado floral">
+        </div>
+        <figcaption class="rotulo">Falda cruzada con vuelo asimétrico</figcaption>
+      </figure>
+      <figure class="pieza reveal">
+        <div class="marco" style="aspect-ratio:2/3" data-placeholder="img/prenda-04.jpg — Imagen 7">
+          <img src="img/prenda-04.jpg" alt="Blusa rosada con boleros y hombro descubierto">
+        </div>
+        <figcaption class="rotulo">Blusa con boleros y hombro descubierto</figcaption>
+      </figure>
+      <figure class="pieza reveal">
+        <div class="marco" style="aspect-ratio:2/3" data-placeholder="img/prenda-05.jpg — Imagen 8">
+          <img src="img/prenda-05.jpg" alt="Blusa beige de lunares con cuello tortuga">
+        </div>
+        <figcaption class="rotulo">Blusa cuello tortuga en tela fluida</figcaption>
+      </figure>
+      <figure class="pieza reveal">
+        <div class="marco" style="aspect-ratio:2/3" data-placeholder="img/prenda-06.jpg — Imagen 9">
+          <img src="img/prenda-06.jpg" alt="Camisa blanca en broderie con acabados finos">
+        </div>
+        <figcaption class="rotulo">Camisa en broderie — acabados finos</figcaption>
+      </figure>
+      <figure class="pieza reveal">
+        <div class="marco" style="aspect-ratio:2/3" data-placeholder="img/prenda-07.jpg — Imagen 10">
+          <img src="img/prenda-07.jpg" alt="Pantalón palazzo verde con estampado floral">
+        </div>
+        <figcaption class="rotulo">Pantalón palazzo con pinzas y bolsillos</figcaption>
+      </figure>
+      <figure class="pieza reveal">
+        <div class="marco" style="aspect-ratio:2/3" data-placeholder="img/prenda-08.jpg — Imagen 11">
+          <img src="img/prenda-08.jpg" alt="Camisa en satín estampado naranja y fucsia">
+        </div>
+        <figcaption class="rotulo">Camisa en satín estampado con canesú</figcaption>
+      </figure>
+    </div>
+
+    <p class="pie-galeria">Prendas confeccionadas por alumnas del taller.</p>
+    <div class="grupo-btn">
+      <a class="btn btn-primario btn-grande" data-cta="galeria"
+         href="https://wa.me/573132575989?text=Hola%20Miriam%2C%20vi%20los%20trabajos%20de%20las%20alumnas%20y%20quiero%20aprender%20a%20hacer%20eso"
+         target="_blank" rel="noopener">Quiero aprender a hacer esto</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 7. LA PROFESORA ====================== -->
+<section id="profesora" class="fondo-negro">
+  <div class="contenedor profesora">
+    <div class="reveal">
+      <div class="marco retrato-principal" data-placeholder="img/profesora-01.jpg — Imagen 14">
+        <img src="img/profesora-01.jpg" alt="Miriam Sandoval en su taller junto a los maniquíes">
+      </div>
+      <div class="retratos-mini">
+        <div class="marco" data-placeholder="img/profesora-02.jpg — Imagen 12">
+          <img src="img/profesora-02.jpg" alt="Miriam Sandoval trabajando en la máquina de coser">
+        </div>
+        <div class="marco" data-placeholder="img/profesora-03.jpg — Imagen 13">
+          <img src="img/profesora-03.jpg" alt="Retrato de Miriam Sandoval">
+        </div>
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="etiqueta">Tu profesora</span>
+      <h2>Miriam Sandoval</h2>
+      <p class="cargo">Diseñadora y patronista · Fundadora de la Academia</p>
+      <p>Llevo más de dos décadas enseñando a coser, y en todo ese tiempo aprendí algo:
+         la mayoría de las mujeres no dejan la costura porque sea difícil, sino porque
+         nadie les explicó bien el principio.</p>
+      <p>Por eso enseño con grupos pequeños y acompaño personalmente cada corte, cada molde
+         y cada costura. Aquí no te entrego un manual y te dejo sola frente a la máquina.
+         Aquí te enseño la técnica real de la alta costura: la que hace que una prenda se vea
+         comprada, no improvisada.</p>
+      <p>Ven al taller, conócelo, mira lo que hacen mis alumnas y decide con calma. Sin compromiso.</p>
+      <p class="firma">Miriam Sandoval</p>
+      <div class="grupo-btn">
+        <a class="btn btn-primario" data-cta="profesora"
+           href="https://wa.me/573132575989?text=Hola%20Miriam%2C%20quiero%20hablar%20contigo%20sobre%20el%20curso%20de%20alta%20costura"
+           target="_blank" rel="noopener">Escríbele a Miriam por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 8. EL TALLER ====================== -->
+<section id="taller">
+  <div class="contenedor centrado">
+    <span class="etiqueta">El espacio</span>
+    <h2>Un taller real, con máquinas, maniquíes <em class="cursiva">y compañeras</em></h2>
+    <p class="subtitulo">Grupos pequeños, mesas amplias y acompañamiento uno a uno. Así son las clases por dentro.</p>
+    <div class="taller-visual reveal">
+      <div class="marco" data-placeholder="img/taller-01.jpg — Imagen 16">
+        <img src="img/taller-01.jpg" alt="Alumnas trabajando en la mesa de corte del taller">
+      </div>
+      <div class="marco" data-placeholder="img/taller-02.jpg — Imagen 15">
+        <img src="img/taller-02.jpg" alt="Miriam explicando patronaje al grupo de alumnas">
+      </div>
+    </div>
+    <div class="micro-beneficios" style="text-align:left">
+      <div class="micro"><span>🕘</span><div><b>Dos jornadas</b><small>Mañana 9:00 a.m. – 12:00 m. · Tarde 2:30 – 5:30 p.m.</small></div></div>
+      <div class="micro"><span>👥</span><div><b>Grupos reducidos</b><small>Atención personalizada en cada clase</small></div></div>
+      <div class="micro"><span>📍</span><div><b>Calasanz</b><small>Carrera 81b # 49-34, fácil de llegar</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 9. CÓMO EMPIEZAS ====================== -->
+<section class="fondo-hueso">
+  <div class="contenedor centrado">
+    <span class="etiqueta">Cómo empiezas</span>
+    <h2>Empezar es más simple <em class="cursiva">de lo que crees</em></h2>
+    <div class="pasos" style="text-align:left">
+      <div class="paso reveal">
+        <b class="n">01</b>
+        <h3>Escríbenos</h3>
+        <p>Un mensaje por WhatsApp al 313 257 5989. Te resolvemos dudas y coordinamos el día de tu visita.</p>
+      </div>
+      <div class="paso reveal">
+        <b class="n">02</b>
+        <h3>Visita el taller</h3>
+        <p>Vienes, conoces el espacio, ves los trabajos y hablas conmigo en persona. Sin compromiso de inscripción.</p>
+      </div>
+      <div class="paso reveal">
+        <b class="n">03</b>
+        <h3>Eliges tu horario</h3>
+        <p>Definimos juntas los días y la jornada que se acomodan a tu rutina, y arrancas en la clase siguiente.</p>
+      </div>
+    </div>
+    <div class="grupo-btn">
+      <a class="btn btn-primario btn-grande" data-cta="pasos"
+         href="https://wa.me/573132575989?text=Hola%20Miriam%2C%20quiero%20dar%20el%20primer%20paso%20e%20inscribirme%20al%20curso"
+         target="_blank" rel="noopener">Dar el primer paso</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 10. INVERSIÓN ====================== -->
+<section id="inversion" class="fondo-negro">
+  <div class="contenedor centrado">
+    <span class="etiqueta">Inversión</span>
+    <h2>Menos de lo que cuesta <em class="cursiva">una sola prenda de marca</em></h2>
+    <div class="bloque-precio" style="text-align:left">
+      <div class="card-precio reveal">
+        <h3>Curso de Alta Costura</h3>
+        <p class="precio">$150.000 <small>/ mes</small></p>
+        <p class="precio-nota">Pago mensual · Sin matrícula oculta</p>
+        <ul class="lista-check">
+          <li>Clases presenciales semanales de 3 horas</li>
+          <li>Los tres módulos: tela elástica, tejido plano y ropa interior</li>
+          <li>Acompañamiento personalizado en cada corte y costura</li>
+          <li>Patronaje y moldería a tu medida</li>
+          <li>Horario a convenir: mañana o tarde</li>
+        </ul>
+        <a class="btn btn-primario btn-ancho btn-grande" data-cta="precio"
+           href="https://wa.me/573132575989?text=Hola%20Miriam%2C%20quiero%20agendar%20mi%20visita%20al%20taller%20y%20conocer%20los%20horarios%20disponibles"
+           target="_blank" rel="noopener">Agenda tu visita al taller</a>
+        <p class="letra-chica">Los materiales (telas, hilos, insumos) los consigue cada alumna y se piden poco a poco, según la prenda que estemos trabajando.</p>
+      </div>
+      <div class="card-requisitos reveal">
+        <h3>Lo que necesitas para empezar</h3>
+        <ul>
+          <li><span>🪡</span><div><b>Máquina de coser en casa</b><small>Una máquina familiar es suficiente, no necesitas industrial.</small></div></li>
+          <li><span>📏</span><div><b>Tus materiales</b><small>Se solicitan progresivamente, nunca todo de una vez.</small></div></li>
+          <li><span>💪</span><div><b>Ganas de aprender</b><small>La experiencia previa no es requisito. De verdad.</small></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 11. PREGUNTAS FRECUENTES ====================== -->
+<section id="preguntas">
+  <div class="contenedor centrado">
+    <span class="etiqueta">Preguntas frecuentes</span>
+    <h2>Preguntas que <em class="cursiva">siempre</em> me hacen</h2>
+    <div class="faq" style="text-align:left">
+      <details>
+        <summary>¿De verdad puedo entrar si nunca he cosido?</summary>
+        <p>Sí. La mayoría de mis alumnas llegan sin haber tocado una máquina. Empezamos por lo más básico: cómo enhebrar, cómo controlar la velocidad, cómo hacer una costura recta. Nadie se queda atrás.</p>
+      </details>
+      <details>
+        <summary>¿Necesito comprar una máquina industrial?</summary>
+        <p>No. Una máquina familiar sirve perfectamente. Lo indispensable es que la tengas en casa para practicar entre clases: ahí es donde realmente se aprende.</p>
+      </details>
+      <details>
+        <summary>¿Cuánto dura el curso?</summary>
+        <p>Depende de tu ritmo y de qué tan lejos quieras llegar. El pago es mensual, así que avanzas sin presión y decides hasta dónde. Lo conversamos en tu visita.</p>
+      </details>
+      <details>
+        <summary>¿Qué materiales tengo que llevar?</summary>
+        <p>Nada por adelantado. Te voy pidiendo telas e insumos a medida que avanzamos con cada prenda, para que no gastes de más ni compres lo que no vas a usar.</p>
+      </details>
+      <details>
+        <summary>¿Qué días son las clases?</summary>
+        <p>Los días se acuerdan al inscribirte, dentro de la jornada de mañana (9:00 a.m. – 12:00 m.) o de tarde (2:30 – 5:30 p.m.).</p>
+      </details>
+      <details>
+        <summary>¿Puedo ir a conocer el taller antes de decidir?</summary>
+        <p>Es justo lo que te recomiendo. Escríbeme al WhatsApp, coordinamos el día y vienes a ver el espacio y los trabajos. Sin compromiso.</p>
+      </details>
+      <details>
+        <summary>¿Puedo vender lo que aprenda a hacer?</summary>
+        <p>Por supuesto. Varias alumnas empezaron cosiendo para ellas y hoy cosen para sus clientas. La técnica que aquí aprendes es la misma que se usa a nivel profesional.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 12. CIERRE ====================== -->
+<section class="fondo-negro cierre">
+  <div class="contenedor">
+    <h2>La primera prenda que hagas <em class="cursiva">no se te va a olvidar nunca</em></h2>
+    <p class="subtitulo">Ven, conoce el taller, mira de cerca lo que hacen las alumnas y decide con calma.
+       La visita no te compromete a nada.</p>
+    <div class="grupo-btn">
+      <a class="btn btn-primario btn-grande" data-cta="cierre"
+         href="https://wa.me/573132575989?text=Hola%20Miriam%2C%20quiero%20agendar%20mi%20visita%20al%20taller"
+         target="_blank" rel="noopener">Agendar mi visita por WhatsApp</a>
+    </div>
+    <p class="datos-cierre">📞 313 257 5989 · 📍 Carrera 81b # 49-34, Calasanz, Medellín</p>
+  </div>
+</section>
+
+<!-- ====================== 13. MAPA + FOOTER ====================== -->
+<iframe class="mapa" loading="lazy" title="Ubicación de la Academia Miriam Sandoval"
+  src="https://maps.google.com/maps?q=Carrera%2081b%20%2349-34%20Calasanz%20Medellin&z=16&output=embed"></iframe>
+
+<footer>
+  <div class="contenedor">
+    <div class="footer-grid">
+      <div>
+        <svg class="emblema-footer" viewBox="0 0 100 100" aria-hidden="true">
+          <circle class="puntada" cx="50" cy="50" r="48"/>
+          <circle class="disco" cx="50" cy="50" r="41"/>
+          <text class="iniciales" x="50" y="59">MS</text>
+          <line class="hilo" x1="36" y1="70" x2="64" y2="70"/>
+        </svg>
+        <h4>Academia Miriam Sandoval</h4>
+        <p><em>Alta costura desde cero.</em><br>Medellín, Colombia</p>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="https://wa.me/573132575989" target="_blank" rel="noopener">WhatsApp: 313 257 5989</a></li>
+          <li>Carrera 81b # 49-34</li>
+          <li>Barrio Calasanz</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Horarios</h4>
+        <ul>
+          <li>Mañanas: 9:00 a.m. – 12:00 m.</li>
+          <li>Tardes: 2:30 – 5:30 p.m.</li>
+          <li>Días a convenir</li>
+        </ul>
+      </div>
+    </div>
+    <p class="copy">© <span id="anio"></span> Academia Miriam Sandoval. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- ====================== FLOTANTES ====================== -->
+<a class="wa-flotante" id="waFlotante" data-cta="flotante" aria-label="Escribir por WhatsApp"
+   href="https://wa.me/573132575989?text=Hola%20Miriam%2C%20vi%20la%20p%C3%A1gina%20y%20quiero%20informaci%C3%B3n%20del%20curso%20de%20alta%20costura"
+   target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.86 1.21 3.06c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35M12 2C6.48 2 2 6.48 2 12c0 1.77.46 3.42 1.27 4.86L2 22l5.27-1.24A9.95 9.95 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2"/></svg>
+</a>
+
+<div class="barra-movil">
+  <div>
+    <small>Academia Miriam Sandoval</small>
+    <b>313 257 5989</b>
+  </div>
+  <a class="btn" data-cta="barra-movil"
+     href="https://wa.me/573132575989?text=Hola%20Miriam%2C%20quiero%20agendar%20mi%20visita%20al%20taller"
+     target="_blank" rel="noopener">Agenda tu visita</a>
+</div>
+
+<script>
+/* Año dinámico en el footer */
+document.getElementById('anio').textContent = new Date().getFullYear();
+
+/* Si una foto todavía no se ha subido a /img, se oculta el ícono de imagen rota
+   y queda visible el recuadro guía con el nombre del archivo que falta.
+   Cuando subas la imagen, esto deja de actuar solo. */
+document.querySelectorAll('.marco img').forEach(img => {
+  const ocultar = () => img.style.display = 'none';
+  img.addEventListener('error', ocultar);
+  if (img.complete && img.naturalWidth === 0) ocultar();
+});
+
+/* ============================================================
+   ANIMACIONES DE SCROLL
+   Regla de oro: el contenido se ve SIEMPRE por defecto. Solo se
+   oculta si este script llega a ejecutarse (clase 'con-animacion'),
+   y el revelado se calcula a mano en cada scroll — sin depender de
+   ninguna API que pueda no dispararse.
+   ============================================================ */
+const sinMovimiento = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const puedeAnimar = !sinMovimiento;
+if (puedeAnimar) document.documentElement.classList.add('con-animacion');
+
+function partirEnPalabras(elemento) {
+  // recorre solo los nodos de texto para no romper <em>, <span> ni <b> internos
+  const nodos = [];
+  const paseo = document.createTreeWalker(elemento, NodeFilter.SHOW_TEXT);
+  while (paseo.nextNode()) if (paseo.currentNode.nodeValue.trim()) nodos.push(paseo.currentNode);
+
+  nodos.forEach(nodo => {
+    const trozo = document.createDocumentFragment();
+    nodo.nodeValue.split(/(\s+)/).forEach(parte => {
+      if (!parte.trim()) { trozo.appendChild(document.createTextNode(parte)); return; }
+      const caja = document.createElement('span');
+      caja.className = 'pal';
+      const interior = document.createElement('span');
+      interior.textContent = parte;
+      caja.appendChild(interior);
+      trozo.appendChild(caja);
+    });
+    nodo.parentNode.replaceChild(trozo, nodo);
+  });
+
+  // retardo progresivo: cada palabra entra 55 ms después de la anterior
+  elemento.querySelectorAll('.pal > span').forEach((p, i) => {
+    p.style.transitionDelay = (i * 0.055) + 's';
+  });
+}
+
+/* Prepara los elementos animables (solo si vamos a animar) */
+const lentes = [];
+
+if (puedeAnimar) {
+  // títulos partidos en palabras
+  document.querySelectorAll('h1, h2').forEach(titulo => {
+    partirEnPalabras(titulo);
+    titulo.classList.add('animado');
+  });
+
+  // fotos: capa propia para el desplazamiento + telón de entrada
+  document.querySelectorAll('.marco').forEach(marco => {
+    const img = marco.querySelector('img');
+    if (img) {
+      const lente = document.createElement('div');
+      lente.className = 'lente';
+      marco.insertBefore(lente, img);
+      lente.appendChild(img);
+      lentes.push(lente);
+    }
+    marco.classList.add('entrada');
+  });
+
+  // en la galería, cada foto entra un poco después que la anterior
+  document.querySelectorAll('.pieza').forEach((pieza, i) => {
+    pieza.classList.remove('reveal');            // evita animación doble sobre la misma foto
+    const marco = pieza.querySelector('.marco');
+    if (marco) marco.style.transitionDelay = ((i % 3) * 0.12) + 's';
+  });
+}
+
+/* Filete que se dibuja bajo los títulos de sección */
+document.querySelectorAll('section h2').forEach(h2 => {
+  const linea = document.createElement('span');
+  linea.className = 'filete';
+  h2.appendChild(linea);
+  h2.classList.add('animado');
+});
+
+/* Lista de todo lo que espera turno para aparecer */
+let pendientes = [...document.querySelectorAll('.reveal, .animado, .marco.entrada')];
+let cifras = [...document.querySelectorAll('.cifra b')];
+
+/* Cuenta ascendente de una cifra */
+function contar(destino) {
+  const texto = destino.textContent.trim();
+  const numero = parseInt(texto.replace(/\D/g, ''), 10);
+  if (!numero || sinMovimiento) return;
+  const prefijo = texto.startsWith('+') ? '+' : '';
+  const sufijo  = texto.endsWith('%') ? '%' : (texto.endsWith('+') ? '+' : '');
+  const inicio = performance.now(), duracion = 1400;
+  const paso = (ahora) => {
+    const avance = Math.min((ahora - inicio) / duracion, 1);
+    const suave = 1 - Math.pow(1 - avance, 3);   // desacelera al final
+    destino.textContent = prefijo + Math.round(numero * suave) + sufijo;
+    if (avance < 1) requestAnimationFrame(paso);
+  };
+  destino.textContent = prefijo + '0' + sufijo;
+  requestAnimationFrame(paso);
+  // seguro: si los fotogramas no corren (pestaña en segundo plano), la cifra
+  // no puede quedarse congelada en cero
+  setTimeout(() => { destino.textContent = texto; }, duracion + 400);
+}
+
+/* Único bucle: revela lo que entra en pantalla, desplaza las fotos y
+   dispara los contadores. Se ejecuta en cada scroll, al cargar y al redimensionar. */
+let pendiente = false;
+
+function revisar() {
+  pendiente = false;
+  const alto = window.innerHeight;
+
+  // 1. revelar lo que ya asoma por el borde inferior
+  for (let i = pendientes.length - 1; i >= 0; i--) {
+    const caja = pendientes[i].getBoundingClientRect();
+    if (caja.top < alto - 50 && caja.bottom > 0) {
+      pendientes[i].classList.add('dentro');
+      pendientes.splice(i, 1);
+    }
+  }
+
+  // 2. desplazar las fotos dentro de su marco
+  for (const lente of lentes) {
+    const caja = lente.parentElement.getBoundingClientRect();
+    if (caja.bottom < -120 || caja.top > alto + 120) continue;   // lejos: no calcula
+    const centro = caja.top + caja.height / 2;
+    const avance = (centro - alto / 2) / (alto / 2 + caja.height / 2);  // +1 abajo → -1 arriba
+    lente.style.transform = `translate3d(0, ${(avance * 3.6).toFixed(2)}%, 0)`;
+  }
+
+  // 3. arrancar los contadores al asomar
+  for (let i = cifras.length - 1; i >= 0; i--) {
+    const caja = cifras[i].getBoundingClientRect();
+    if (caja.top < alto - 40 && caja.bottom > 0) { contar(cifras[i]); cifras.splice(i, 1); }
+  }
+}
+
+const alScroll = () => { if (!pendiente) { pendiente = true; requestAnimationFrame(revisar); } };
+window.addEventListener('scroll', alScroll, { passive: true });
+
+// resize y regreso a la pestaña llaman directo: son eventos raros y no deben
+// quedar a la espera de un fotograma que quizá no llegue
+window.addEventListener('resize', revisar, { passive: true });
+window.addEventListener('load', revisar);
+document.addEventListener('visibilitychange', () => { if (!document.hidden) revisar(); });
+
+revisar();
+// las fotos y las fuentes cambian las alturas al terminar de cargar: se repasa un rato
+let repasos = 0;
+const repaso = setInterval(() => { revisar(); if (++repasos > 12) clearInterval(repaso); }, 400);
+
+// disponible para comprobar el estado desde la consola del navegador
+window.revisarAnimaciones = revisar;
+
+/* La barra superior se compacta al hacer scroll */
+const barra = document.querySelector('.nav');
+const compactar = () => barra.classList.toggle('compacto', window.scrollY > 40);
+window.addEventListener('scroll', compactar, { passive: true });
+compactar();
+
+/* Botón flotante de WhatsApp: aparece tras el 25% del scroll */
+const wa = document.getElementById('waFlotante');
+const alternarWA = () => {
+  const avance = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+  wa.classList.toggle('visible', avance > .25);
+};
+window.addEventListener('scroll', alternarWA, { passive: true });
+alternarWA();
+
+/* Medición: registra qué CTA generó el clic.
+   Conecta aquí Google Analytics / Meta Pixel cuando los tengas. */
+document.querySelectorAll('[data-cta]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const origen = btn.dataset.cta;
+    console.log('CTA →', origen);
+    if (window.gtag) gtag('event', 'click_whatsapp', { origen: origen });
+    if (window.fbq)  fbq('trackCustom', 'ClicWhatsApp', { origen: origen });
+  });
+});
+
+/* FAQ: solo una pregunta abierta a la vez */
+const preguntas = document.querySelectorAll('.faq details');
+preguntas.forEach(d => d.addEventListener('toggle', () => {
+  if (d.open) preguntas.forEach(o => { if (o !== d) o.open = false; });
+}));
+</script>
+</body>
+</html>
