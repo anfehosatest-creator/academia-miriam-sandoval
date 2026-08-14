@@ -41,3 +41,7 @@ chat se sabe desde qué sección escribió cada persona.
 - [ ] Agregar sección de testimonios de alumnas
 - [ ] Conectar Google Analytics o Meta Pixel (los botones ya están etiquetados
       con `data-cta` y el gancho está listo en el script)
+
+## URL
+
+- https://res.cloudinary.com/t6wa54je/video/upload/v1786673538/fianal_1_1.mp4
