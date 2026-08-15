@@ -223,6 +223,24 @@ em.cursiva{font-style:italic;font-weight:400}
           mask-image:radial-gradient(ellipse 70% 55% at 50% 25%,#000 20%,transparent 75%);
   opacity:.6;
 }
+
+/* ---------- Hero con video de fondo ---------- */
+.hero--video{padding-bottom:clamp(60px,9vw,110px);color:var(--blanco)}
+.hero--video::before{display:none} /* apaga la cuadrícula de fondo del hero normal */
+.hero__media{position:absolute;inset:0;z-index:-2;overflow:hidden;background:var(--negro)}
+.hero__video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero__overlay{
+  position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(10,10,10,.55) 0%,rgba(10,10,10,.35) 35%,rgba(10,10,10,.65) 100%);
+}
+.hero--video .badge{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:var(--peltre)}
+.hero--video .badge b{color:var(--blanco)}
+.hero--video .subtitulo{color:var(--perla)}
+.hero--video .hero-bullets{color:var(--peltre)}
+.hero--video .btn-secundario{color:var(--blanco);border-color:rgba(255,255,255,.55)}
+.hero--video .btn-secundario:hover{background:var(--blanco);color:var(--negro)}
+@media(prefers-reduced-motion:reduce){.hero__video{display:none}.hero__media{background:var(--negro)}}
+
 .badge{
   display:inline-flex;align-items:center;gap:9px;
   background:var(--hueso);border:1px solid var(--gris-claro);border-radius:999px;
@@ -575,7 +593,14 @@ footer a:hover{color:var(--blanco)}
 </nav>
 
 <!-- ====================== 2. HERO ====================== -->
-<header class="hero">
+<header class="hero hero--video">
+  <div class="hero__media" aria-hidden="true">
+    <video class="hero__video" autoplay muted loop playsinline preload="metadata">
+      <source src="https://res.cloudinary.com/t6wa54je/video/upload/so_3,q_auto/v1786759084/VID-20250320-WA0013.webm" type="video/webm">
+      <source src="https://res.cloudinary.com/t6wa54je/video/upload/so_3,q_auto/v1786759084/VID-20250320-WA0013.mp4" type="video/mp4">
+    </video>
+    <div class="hero__overlay"></div>
+  </div>
   <div class="contenedor centrado">
     <span class="badge">✂ <b>Cupos limitados</b> · Grupos reducidos · Medellín, Calasanz</span>
     <h1>
@@ -597,19 +622,6 @@ footer a:hover{color:var(--blanco)}
          href="https://wa.me/573132575989?text=Hola%20Miriam%2C%20quiero%20agendar%20una%20visita%20al%20taller%20para%20conocer%20el%20curso"
          target="_blank" rel="noopener">Agenda tu visita al taller</a>
       <a class="btn btn-secundario btn-grande" href="#proyectos">▷ Ver los trabajos de las alumnas</a>
-    </div>
-  </div>
-  <div class="contenedor">
-    <div class="hero-visual reveal">
-      <div class="marco" data-placeholder="img/prenda-02.jpg">
-        <img src="img/prenda-02.jpg" alt="Conjunto camisero y pantalón en verde oliva confeccionado en el taller">
-      </div>
-      <div class="marco central" data-placeholder="img/hero.jpg">
-        <img src="img/hero.jpg" alt="Dos alumnas de la academia luciendo prendas confeccionadas en el taller">
-      </div>
-      <div class="marco" data-placeholder="img/prenda-07.jpg">
-        <img src="img/prenda-07.jpg" alt="Pantalón palazzo verde con estampado floral confeccionado en el taller">
-      </div>
     </div>
   </div>
 </header>
