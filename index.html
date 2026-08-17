@@ -1017,6 +1017,10 @@ footer a:hover{color:var(--blanco)}
 </div>
 
 <script>
+/* Video del hero un poco más lento (85% de la velocidad normal) */
+const heroVideo = document.querySelector('.hero__video');
+if (heroVideo) heroVideo.playbackRate = 0.85;
+
 /* Año dinámico en el footer */
 document.getElementById('anio').textContent = new Date().getFullYear();
 
